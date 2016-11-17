@@ -1,6 +1,6 @@
 def application (environ, start_response):
 
-    response_body = environ['QUERY_STRING'].replace("&", "\r\n")
+    response_body = 'Hello, world!' #environ['QUERY_STRING'].replace("&", "\r\n")
 
     status = '200 OK'
 
