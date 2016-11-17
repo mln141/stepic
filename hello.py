@@ -1,14 +1,10 @@
-def application (environ, start_response):
-
-    response_body = 'Hello, world!' #environ['QUERY_STRING'].replace("&", "\r\n")
-
+ #environ['QUERY_STRING'].replace("&", "\r\n")
+def wsgi_application(environ, start_response):
+    # бизнес-логика
     status = '200 OK'
-
-    # Now content type is text/html
-    response_headers = [
-        ('Content-Type', 'text/html'),
-        ('Content-Length', str(len(response_body)))
+    headers = [
+        ('Content-Type', 'text/plain')
     ]
-
-    start_response(status, response_headers)
-return [response_body]
+    body = 'Hello, world!'
+    start_response(status, headers )
+    return [ body ]
