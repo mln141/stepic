@@ -7,6 +7,6 @@ cd web
 #django-admin startproject ask
 #python manage.py startapp qa
 sudo gunicorn -b 0.0.0.0:8080 hello:hello
-#sudo gunicorn -b 0.0.0.0:8000 web/ask:qa 
+sudo gunicorn -b 0.0.0.0:8000 ask:qa 
 
 cd /home/box/
