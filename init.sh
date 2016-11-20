@@ -6,7 +6,7 @@ sudo /etc/init.d/mysql start
 cd web
 #django-admin startproject ask
 #python manage.py startapp qa
-sudo gunicorn -b 0.0.0.0:8080 web/hello:hello
+sudo gunicorn -b 0.0.0.0:8080 hello:hello
 #sudo gunicorn -b 0.0.0.0:8000 web/ask:qa 
 
 cd /home/box/
