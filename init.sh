@@ -5,5 +5,7 @@ sudo /etc/init.d/gunicorn restart
 sudo /etc/init.d/mysql start
 cd web
 django-admin startproject ask
+cd ask
+python manage.py qa
 cd /home/box/
 #sudo gunicorn -b 0.0.0.0:8080 web/hello:hello 
